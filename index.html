@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Night View</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </header>
+
+    <section class="section">
+        <img src="images/stars.png" alt="stars" id="stars">
+        <img src="images/moon.png" alt="moon" id="moon">
+        <img src="images/mountains_behind.png" alt="mountains_behind" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="button">Explore!</a>
+        <img src="images/mountains_front.png" alt="mountains_front" id="mountains_front">
+    </section>
+
+    <section class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, voluptatum? Accusantium quasi cumque sint ex, sunt aperiam, dolor, tempora maiores facilis molestiae aspernatur repellendus totam praesentium ab quisquam beatae cupiditate ducimus animi. Velit, officiis dolores animi doloribus iusto molestiae architecto. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, voluptatum? Accusantium quasi cumque sint ex, sunt aperiam, dolor, tempora maiores facilis molestiae aspernatur repellendus totam praesentium ab quisquam beatae cupiditate ducimus animi. Velit, officiis dolores animi doloribus iusto molestiae architecto.
+        </p>
+        <br></br>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatem delectus recusandae dolor, dolore debitis quos! Dolorem voluptatum laborum inventore, explicabo delectus cupiditate, adipisci a maiores officia ipsam repellendus nihil labore? Neque amet corporis at porro culpa minima natus qui blanditiis cumque consectetur odio, vel, error sequi facere debitis? Accusamus omnis hic ut obcaecati nobis!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatem delectus recusandae dolor, dolore debitis quos! Dolorem voluptatum laborum inventore, explicabo delectus cupiditate, adipisci a maiores officia ipsam repellendus nihil labore? Neque amet corporis at porro culpa minima natus qui blanditiis cumque consectetur odio, vel, error sequi facere debitis? Accusamus omnis hic ut obcaecati nobis!
+        </p>
+        <br></br>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum temporibus suscipit, veniam vel quasi voluptatibus debitis quisquam ut atque ullam amet quos culpa, a earum odit ducimus minus? Totam, eveniet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum temporibus suscipit, veniam vel quasi voluptatibus debitis quisquam ut atque ullam amet quos culpa, a earum odit ducimus minus? Totam, eveniet?
+        </p>
+        <br></br>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aspernatur aut ratione voluptatem omnis incidunt? Inventore laboriosam fuga quos autem.      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aspernatur aut ratione voluptatem omnis incidunt? Inventore laboriosam fuga quos autem.
+        </p>
+
+        </section>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let button = document.getElementById('button');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                button.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    
+</body>
+</html>
